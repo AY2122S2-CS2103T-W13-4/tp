@@ -1,11 +1,11 @@
 package seedu.address.logic.commands;
 
+import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
+
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.person.Note;
-
-import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
 /**
  * Changes the note of an existing client in the address book
@@ -27,15 +27,15 @@ public class NoteCommand extends Command {
     private final Index index;
     private final Note note;
 
+    /**
+     * @param index of the person in the list to add notes
+     * @param note note to add to the person
+     */
     public NoteCommand(Index index, Note note) {
         requireAllNonNull(index, note);
-
         this.index = index;
         this.note = note;
     }
-
-    public static final String MESSAGE_NOT_IMPLEMENTED_YET =
-            "Note command not implemented yet";
 
     @Override
     public CommandResult execute(Model model) throws CommandException {
