@@ -57,7 +57,7 @@ public class Person {
 
     /**
      * Every field must be present and not null.
-     * Overloaded constructor for NoteCommand.
+     * Overloaded constructor for AddNoteCommand.
      */
     public Person(Name name, Phone phone, Email email, Address address, Set<Tag> tags, Note note) {
         requireAllNonNull(name, phone, email, address, tags, note);
