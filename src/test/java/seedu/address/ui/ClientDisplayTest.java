@@ -12,15 +12,16 @@ import javafx.embed.swing.JFXPanel;
 import seedu.address.model.client.Client;
 
 public class ClientDisplayTest {
+
+    private JFXPanel panel = new JFXPanel();
+
     @Test
     public void constructor_nullClient_throwsNullPointerException() {
-        JFXPanel fxPanel = new JFXPanel();
         assertThrows(AssertionError.class, () -> new ClientDisplay((Client) null));
     }
 
     @Test
     public void equals() {
-        JFXPanel fxPanel = new JFXPanel();
         assertEquals(new ClientDisplay(ALICE), new ClientDisplay(ALICE));
         assertNotEquals(new ClientDisplay(ALICE), new ClientDisplay(BOB));
     }

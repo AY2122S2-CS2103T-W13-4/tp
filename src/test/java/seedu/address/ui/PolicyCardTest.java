@@ -12,6 +12,9 @@ import javafx.embed.swing.JFXPanel;
 import seedu.address.model.policy.Policy;
 
 public class PolicyCardTest {
+
+    private JFXPanel panel = new JFXPanel();
+
     @Test
     public void constructor_nullClient_throwsNullPointerException() {
         assertThrows(AssertionError.class, () -> new PolicyCard((Policy) null, 0));
@@ -19,7 +22,6 @@ public class PolicyCardTest {
 
     @Test
     public void equals() {
-        JFXPanel fxPanel = new JFXPanel();
         PolicyCard policyCard = new PolicyCard(INSURANCE, 0);
         assertTrue(policyCard.equals(new PolicyCard(INSURANCE, 0)));
         assertFalse(policyCard.equals(new PolicyCard(INSURANCE, 1)));

@@ -12,6 +12,8 @@ import javafx.embed.swing.JFXPanel;
 
 public class MeetingCardTest {
 
+    private JFXPanel panel = new JFXPanel();
+
     @Test
     public void constructor_nullClient_throwsNullPointerException() {
         assertThrows(AssertionError.class, () -> new MeetingCard(null, 0));
@@ -19,7 +21,6 @@ public class MeetingCardTest {
 
     @Test
     public void equals() {
-        JFXPanel fxPanel = new JFXPanel();
         MeetingCard meetingCard = new MeetingCard(WITH_ALICE, 0);
         assertTrue(meetingCard.equals(new MeetingCard(WITH_ALICE, 0)));
         assertFalse(meetingCard.equals(new MeetingCard(WITH_ALICE, 1)));

@@ -10,6 +10,9 @@ import org.junit.jupiter.api.Test;
 import javafx.embed.swing.JFXPanel;
 
 public class PreferenceRowTest {
+
+    private JFXPanel panel = new JFXPanel();
+
     @Test
     public void constructor_nullClient_throwsNullPointerException() {
         assertThrows(AssertionError.class, () -> new PreferenceRow(null));
@@ -17,7 +20,6 @@ public class PreferenceRowTest {
 
     @Test
     public void equals() {
-        JFXPanel fxPanel = new JFXPanel();
         PreferenceRow preferenceRow = new PreferenceRow(getTypicalPreferenceMaps().get(0).asObservableList().get(0));
         assertTrue(preferenceRow.equals(new PreferenceRow(getTypicalPreferenceMaps().get(0).asObservableList()
                 .get(0))));

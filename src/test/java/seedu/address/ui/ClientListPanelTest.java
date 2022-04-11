@@ -17,15 +17,16 @@ import seedu.address.model.client.Client;
 import seedu.address.model.client.SortCriteria;
 
 public class ClientListPanelTest {
+
+    private JFXPanel panel = new JFXPanel();
+
     @Test
     public void constructor_nullClients_throwsNullPointerException() {
-        JFXPanel fxPanel = new JFXPanel();
         assertThrows(AssertionError.class, () -> new ClientListPanel(null));
     }
 
     @Test
     public void equals() {
-        JFXPanel fxPanel = new JFXPanel();
         List<Client> listWithBob = new ArrayList<>();
         listWithBob.add(ALICE);
         listWithBob.add(BOB);

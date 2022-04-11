@@ -12,6 +12,9 @@ import javafx.embed.swing.JFXPanel;
 import seedu.address.model.client.Client;
 
 public class ClientCardTest {
+
+    private JFXPanel panel = new JFXPanel();
+
     @Test
     public void constructor_nullClient_throwsNullPointerException() {
         assertThrows(AssertionError.class, () -> new ClientCard((Client) null, 0));
@@ -19,7 +22,6 @@ public class ClientCardTest {
 
     @Test
     public void equals() {
-        JFXPanel fxPanel = new JFXPanel();
         ClientCard clientCard = new ClientCard(ALICE, 0);
         assertTrue(clientCard.equals(new ClientCard(ALICE, 0)));
         assertFalse(clientCard.equals(new ClientCard(ALICE, 1)));

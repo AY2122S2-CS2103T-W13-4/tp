@@ -15,15 +15,16 @@ import javafx.embed.swing.JFXPanel;
 import seedu.address.model.policy.Policy;
 
 public class PolicyListPanelTest {
+
+    private JFXPanel panel = new JFXPanel();
+
     @Test
     public void constructor_nullClients_throwsNullPointerException() {
-        JFXPanel fxPanel = new JFXPanel();
         assertThrows(AssertionError.class, () -> new PolicyListPanel(null));
     }
 
     @Test
     public void equals() {
-        JFXPanel fxPanel = new JFXPanel();
         List<Policy> list1 = new ArrayList<>();
         list1.add(INSURANCE);
         list1.add(INVESTMENT);

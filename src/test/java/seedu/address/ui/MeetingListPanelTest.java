@@ -15,15 +15,16 @@ import javafx.embed.swing.JFXPanel;
 import seedu.address.model.meeting.Meeting;
 
 public class MeetingListPanelTest {
+
+    private JFXPanel panel = new JFXPanel();
+
     @Test
     public void constructor_nullClients_throwsNullPointerException() {
-        JFXPanel fxPanel = new JFXPanel();
         assertThrows(AssertionError.class, () -> new MeetingListPanel(null, true));
     }
 
     @Test
     public void equals() {
-        JFXPanel fxPanel = new JFXPanel();
         List<Meeting> listWithBenson = new ArrayList<>();
         listWithBenson.add(WITH_ALICE);
         listWithBenson.add(WITH_BENSON);
