@@ -5,13 +5,15 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.address.testutil.Assert.assertThrows;
 import static seedu.address.testutil.TypicalPreferenceMap.getTypicalPreferenceMaps;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
-import javafx.embed.swing.JFXPanel;
 
 public class PreferenceRowTest {
 
-    private JFXPanel panel = new JFXPanel();
+    @BeforeAll
+    public static void init() {
+        TestJavaApplication.TestApp.initialize();
+    }
 
     @Test
     public void constructor_nullClient_throwsNullPointerException() {

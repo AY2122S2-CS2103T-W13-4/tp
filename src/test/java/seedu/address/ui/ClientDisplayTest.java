@@ -6,14 +6,19 @@ import static seedu.address.testutil.Assert.assertThrows;
 import static seedu.address.testutil.TypicalClients.ALICE;
 import static seedu.address.testutil.TypicalClients.BOB;
 
+import javafx.application.Application;
+import javafx.application.Platform;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import javafx.embed.swing.JFXPanel;
 import seedu.address.model.client.Client;
 
 public class ClientDisplayTest {
 
-    private JFXPanel panel = new JFXPanel();
+    @BeforeAll
+    public static void init() {
+        TestJavaApplication.TestApp.initialize();
+    }
 
     @Test
     public void constructor_nullClient_throwsNullPointerException() {

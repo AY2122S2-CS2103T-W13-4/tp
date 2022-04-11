@@ -6,13 +6,15 @@ import static seedu.address.testutil.Assert.assertThrows;
 import static seedu.address.testutil.TypicalMeetings.WITH_ALICE;
 import static seedu.address.testutil.TypicalMeetings.WITH_BENSON;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
-import javafx.embed.swing.JFXPanel;
 
 public class MeetingCardTest {
 
-    private JFXPanel panel = new JFXPanel();
+    @BeforeAll
+    public static void init() {
+        TestJavaApplication.TestApp.initialize();
+    }
 
     @Test
     public void constructor_nullClient_throwsNullPointerException() {

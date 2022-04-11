@@ -8,15 +8,18 @@ import static seedu.address.testutil.TypicalMeetings.WITH_BENSON;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import javafx.collections.FXCollections;
-import javafx.embed.swing.JFXPanel;
 import seedu.address.model.meeting.Meeting;
 
 public class MeetingListPanelTest {
 
-    private JFXPanel panel = new JFXPanel();
+    @BeforeAll
+    public static void init() {
+        TestJavaApplication.TestApp.initialize();
+    }
 
     @Test
     public void constructor_nullClients_throwsNullPointerException() {

@@ -9,6 +9,7 @@ import static seedu.address.testutil.TypicalClients.BOB;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import javafx.collections.FXCollections;
@@ -18,7 +19,10 @@ import seedu.address.model.client.SortCriteria;
 
 public class ClientListPanelTest {
 
-    private JFXPanel panel = new JFXPanel();
+    @BeforeAll
+    public static void init() {
+        TestJavaApplication.TestApp.initialize();
+    }
 
     @Test
     public void constructor_nullClients_throwsNullPointerException() {
