@@ -23,7 +23,7 @@ You can reach us at the email `n.vijay.narayanan@u.nus.edu.sg`
 
 <img src="images/raynerljm.png" width="200px">
 
-[[github](http://github.com/raynerljm)] [[portfolio](team/myc37.md)]
+[[github](http://github.com/raynerljm)] [[portfolio](team/raynerljm.md)]
 
 * Role: Developer
 * Responsibilities: UI
