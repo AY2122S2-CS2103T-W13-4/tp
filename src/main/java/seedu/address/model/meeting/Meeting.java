@@ -65,7 +65,6 @@ public class Meeting {
      */
     public boolean isUpcoming() {
         LocalDateTime yesterday = LocalDate.now().atStartOfDay().minusMinutes(1);
-
         return startDateTime.isAfter(yesterday);
     }
 
